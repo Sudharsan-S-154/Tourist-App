@@ -1,0 +1,711 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    font-family:sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.941);
+}
+
+.image{
+    height:200px;
+    width:200px;
+    overflow:hidden;
+}
+.image img{
+    /* background-size: cover; */
+    object-fit: cover;
+    transition: all 0.5s;
+    height:100%;
+}
+figure img:hover{
+    transform: scale(1.5) rotateX(20deg);
+}
+.checked{
+    color:orange;
+    /* margin: 0;
+    padding: 0;
+    display: inline; */
+}
+
+.container{  
+    background-image: url("maldives.jpg") ;
+    background-size: cover;
+    height:100vh;
+    max-width: 100%;
+    position:relative;
+    /* opacity: 1; */
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: end;
+    padding-top:20px; 
+    animation: bg-anime 20s  ease-in-out infinite;
+    }
+    /*camping adventures roadtrip feelnature*/
+
+.navbar li{
+    list-style-type: none; 
+}
+
+.navbar{
+    display: flex;
+    gap:3rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    transform: translateX(-10px);  
+    padding-top:5px;
+    z-index:4;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color:white;
+    font-weight:600;
+    font-size:1.2rem;
+    letter-spacing: 0.7px;
+}
+
+.btn{
+    font: inherit;
+    color:black;
+    transform: translateY(-5px);
+    font-weight:600;
+    font-size:1.2rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:5px 10px;
+    background-image: linear-gradient(to left,orange,yellow);
+}
+
+.navbar li a:hover{
+    border-bottom:3px solid white;
+    padding-bottom: 2px;
+    opacity: 0.8;
+    transition: all 0.1s linear;
+}
+
+.logo{
+    font-weight:800;
+    font-size:2rem;
+    /* background-image: url("background-img.jpg"); */
+    max-height:50px;
+    transform: translateY(-5px);
+    /* -webkit-background-clip: text; */
+    color:white;
+
+    /* -webkit-text-stroke: 3px white; */
+    white-space: nowrap;
+}
+.container .fa-bars{
+   color:red;
+   /* transform: translateX(200px); */
+   display: none;
+   font-size:30px;
+}
+
+.container .fa-xmark{
+    display: none;
+    cursor: pointer;
+    font-size:30px;
+    position: fixed;
+    top: 12px;
+    color:white;
+    right:12px;
+ }
+
+ .main1 {
+    height:500px;
+    width:700px;
+    /* background-color:transparent;  */
+    text-align: center;
+    padding-top:10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+   
+ }
+ .main1 .index::before{
+    content:' ';
+    font-size:2.6rem;
+    margin-top: 35px;
+    letter-spacing: 6px;
+    /* width: fit-content; */
+    font-weight: bold;
+    color:white;
+    font-family:"Abril Fatface",sans-serif;
+    -webkit-text-stroke: 1px white;
+    animation: anime 20s ease-in infinite forwards;
+ }
+ @keyframes anime{
+    0%{
+        content:"FEEL NATURE";
+        display:block;
+    }
+    35%{
+        content:"CAMPING TOGETHER";
+        display: block;
+    }
+    75%{
+        content:"WONDERFUL ISLAND";
+        display: block;
+    }
+    100%{
+        content: "OFFROAD TRAVEL";
+        display: block;
+    }
+}
+
+  .main1 .index::after{
+    content:' ';
+    letter-spacing: 2.5px;
+    color:white;
+    /* white-space: wrap; */
+    /* display:grid;
+    grid-template-columns: 1,1fr; */
+    /* min-width: 400px; */
+    line-height:25px;
+    text-align: justify;
+    margin-top: 30px;
+    -webkit-text-stroke: 1px white;
+    animation: anime1 20s ease-in infinite forwards;
+ }
+ @keyframes anime1{
+    0%{
+        content:"Nature travel offers the thrill of discovering something new, or at the very least, something only a fraction of people have seen in person.Travelling alone is peaceful, many things which would go unnoticed, come to light.";
+        display: block;
+    }
+
+    35%{
+        content:"Camping allows you to be away from the pressures of daily life. You can enjoy the solitude and quiet that nature offers while building your self-confidence by truly embracing nature.lets you enjoy the beauty and simplicity of nature.";
+        display: block;
+        
+    }
+    75%{
+        content: "It's a place where the pace of life slows down, and the natural beauty takes center stage. The sound of waves gently crashing against the shore and the chirping of exotic birds create a symphony that soothes the soul.";
+        display: block;
+    }
+    100%{
+        content: "When it comes to off-roading in paradise, Kauai, Hawaii, offers a unique and breathtaking experience. Known as the “Garden Isle,” Kauai boasts lush rainforests, cascading waterfalls that make it an off-roader’s dream destination.";
+        display: block;
+    }
+}  
+
+@keyframes bg-anime{
+    0%{
+        background-image: url("feel\ nature.jpg");
+    }
+    35%{
+        background-image: url("fire-camping.jpg");
+    }
+    75%{
+        background-image: url("island.jpg");
+    }
+    100%{
+       background-image: url("offroad.jpg");
+    }
+}
+
+.btn3{
+    margin-top: 60px;
+    cursor: pointer;
+    /* width: 100px; */
+    z-index: 1000;
+    /* position: fixed; */
+}
+.main1 .whatsapp{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+    
+    flex-wrap:wrap ;
+
+}
+.main1 .phno{
+    height: 50px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: orange;
+    color: navy;
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* position: absolute;
+    bottom: 0;
+    right: 0;*/
+    transform: translateX(8rem); 
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main2{
+    color: antiquewhite;
+    margin:30px;
+    margin-top: 50px;
+}
+.main2 .aboutus {
+    display: grid;
+    grid-template-columns: repeat(2,40% 60%);
+    padding:15px;
+    margin-top: 20px;
+    border:2px solid white;
+    background-color: grey;
+    /* background-color: ; */
+}
+.main2 .aboutus:hover {
+    background-color: lightgrey;
+    color:black;
+    transition: all 0.6s linear;
+    
+}
+
+.main2 .aboutus .about{
+    display: flex;
+    /* max-width: 1200px;
+    margin: 0 auto; */
+    flex-direction:column;
+    justify-content: space-evenly;
+}
+.main2 .aboutus .about-img{
+    transform: translateX(-70px);
+ 
+ }
+ .about-features .features figure:hover{
+  outline: 5px solid white;
+  outline-offset:5px;
+  z-index: 200;
+}
+.about-features .features {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+    /* place-content: center; */
+    /* flex-direction: column;*/
+     /* margin-left:70px; --
+     margin-top: 20px; */ 
+     /* gap:3rem; */
+    /* justify-content: space-evenly;  */
+    /* height: 300px;
+    width: 300px; */
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+
+
+
+/* .about-features .features figure{
+   text-align: center; */
+   /* max-width: 1200px; */
+   /* display: grid;
+   margin:0 auto; */
+   /* grid-template-columns: repeat(2,1fr); */
+   /* grid-template-columns: repeat(4, 1fr); */
+   /* flex-direction: column; */
+   /* justify-content: center;
+   background-color: aliceblue; */
+   /* flex-wrap: wrap; */
+/* } */
+/* .about-features .features figure{ */
+    /* text-align: center; */
+    /* display: grid; */
+    /* flex-direction: column; */
+    /* justify-content: center;
+    background-color: aliceblue; */
+    /* flex-wrap: wrap;
+ } */
+ .main3{
+    color:white;
+    margin: 30px;
+    margin-top:75px;
+ }
+
+ .main3 .service{
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex:1 1 200px;
+ }
+ .main3 .service .services:hover{
+    background-color: aqua;
+    color:black;
+    transition: all 0.6s linear;
+    /* box-shadow: 5px 5px 5px aqua; */
+ }
+
+ .main3 .service .services::before{
+    content:"";
+   position:absolute;
+   top: -1;
+   left: -1;
+   height: 101%;
+   width: 101%;
+   background-image: linear-gradient(aqua,powderblue,whitesmoke);
+   z-index:-1;
+   transform: translateX(-22px);
+ }
+
+ .main3 .service .services::after{
+    content:"";
+   position:absolute;
+   top: -1;
+   left: -1;
+   height: 101%;
+   width: 101%;
+   background-image: linear-gradient(aqua,powderblue,whitesmoke);
+   filter: blur(10px);
+   z-index:-1;
+   transform: translateX(-22px);
+ }
+
+ .main3 .service .services{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    position: relative;
+    background-color: black;
+    /* border: 1px solid white; */
+    height: 295px;
+    width: 293px;
+    margin:20px;
+    padding:20px;
+    /* z-index: 5; */
+ }
+
+ .main4{
+    color:white;
+    margin: 30px;
+    margin-top:75px;
+ }
+
+ .main4 .package{
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex:3 1 auto;
+ }
+ .main4 .package .packages{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    background-color: white;
+    color:black;
+    border: 1px solid white;
+    height: 475px;
+    width: 350px;
+    margin:20px;
+    border-radius: 20px;
+ }
+ .main4 .package .packages .package-div{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+ }
+
+ .main4 .package .packages img{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-size: cover;
+ }
+
+ .btn4{
+    background-image: linear-gradient(to left,white,skyblue);
+ }
+ .main4{
+    text-align: center;
+ }
+
+ .main5{
+    background-color:rgb(46, 88, 148);
+    color: rgb(217, 210, 210);
+ }
+
+ .main5 .contact{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* gap:10rem; */
+    /* padding:30px; */
+    font-size: 1.1rem;
+    
+ }
+ 
+
+
+ .main5 .contact .contacts{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    gap:1.2rem;
+    padding: 2rem;
+     flex-wrap: wrap;
+    flex:100px 1 ;
+  
+    /* background-color: bisque; */
+ }
+ .main5 .contact .contacts1{
+    gap: 1rem;
+    line-height: 25px;
+    margin-left: 15px;
+    word-spacing: 5px;
+    transform: translateY(15px);
+  }
+
+ .main5 .contact .contacts2{
+    /* text-align: center; */
+    transform: translateY(5px);
+  }
+
+  .main5 .contact .contacts3{
+    /* text-align: center; */
+    transform: translateY(5px);
+  }
+
+  .main5 .contact .contacts2 .servicelist{
+    transform: translateY(-8px);
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+
+  }
+  .main5 .contact .contacts2 li::marker{
+    content: "> ";
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+
+  .main5 .contact .contacts2 li{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    transform: translateY(-5px);
+  }
+  .footer{
+    background-color:rgb(46, 88, 148);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 200px 1;
+    justify-content: space-around;
+    padding-block: 10px;
+    padding-inline: 20px;
+    color: rgb(217, 210, 210);
+  }
+  .footer p{
+    margin-bottom: 10px;
+  }
+  .footer .icon{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    padding-bottom: 10px;
+  }
+  .footer .icon .icons{
+    font-size:1.5rem;
+    cursor: pointer;
+  }
+  .footer .icon .icons:hover{
+    opacity: 0.5;
+  }
+  .footer a{
+    display:grid;
+    background-color: aliceblue;
+    place-content: center; 
+    text-decoration: none; 
+    height: 40px; 
+    width: 40px;
+  }
+  .footer a:hover{
+    background-color:aqua;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width:1000px){
+    .about-features .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-content: center;
+        /* flex-direction: column;
+        justify-content: space-evenly; */
+        margin-top: 20px;
+        place-content: center;
+        margin-left: 30px;
+    }
+  
+ .main2 .aboutus .about-img{
+   transform: translateX(-100px);
+
+}
+.main1 .whatsapp{
+    display: none;
+  }
+/* .main5 .contact .contacts2 li{
+    transform: translateY(-30px);
+  } */
+
+ }
+ @media screen and (max-width:800px){
+    .about-features .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       /* justify-content: center; */
+        /* flex-direction: column;
+        justify-content: space-evenly; */
+        margin-top: 20px;
+        gap:1rem;
+        margin-inline: 75px;
+        /* transform: translateX(100px); */
+        /* place-content: center; */
+    }
+    .main1{
+        height: 350px;
+        width:500px;
+        /* font-size:14px; */
+        white-space:wrap;
+        padding-top:0px;
+    }
+    .main1 .index::before{
+        font-size:2.1rem;
+}
+.main3 .service .hidden2{
+    display:none;
+ }
+ /* .main5 .contact .contacts2 li{
+    transform: translateY(-55px);
+  } */
+  .main5 .contact .contacts3{
+    margin-left: 1rem;
+  }
+
+
+ }
+ /* @media screen and (max-width:750px){
+   
+
+ } */
+
+ @media screen and (max-width:550px){
+    .about-features .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       /* justify-content: center; */
+        /* flex-direction: column;
+        justify-content: space-evenly; */
+        margin-top: 20px;
+        margin-inline: 0px;
+        /* transform: translateX(100px); */
+        /* place-content: center; */
+    }
+    .main1{
+        height: 400px;
+        width: 450px;
+    }
+    .main5 .contact .contacts3{
+        /* text-align: center; */
+        transform: translateY(-15px);
+      }
+   
+  
+  
+ }
+
+
+
+
+
+@media screen and (max-width:1100px){
+    .navbar{
+        color:black;
+        display:none;
+        
+    }
+    .container{
+        display:flex;
+        justify-content: space-around;
+        background-position: center center;
+        gap:12rem;
+    }
+    .logo{
+        font-size: 2rem;
+    }
+    .container .fa-bars{
+        display:block;
+        cursor:pointer;
+        color:white;
+     }
+     .main2 .aboutus {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        /* grid-auto-rows: 400px;
+        
+        grid-gap: 4rem; */
+        justify-content: center;
+        text-align: center;
+
+ }
+    
+    
+}
+
+
+@media screen and (max-width:1200px){
+     .main2 .aboutus {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        /* grid-auto-rows: 400px;
+        
+        grid-gap: 4rem; */
+        justify-content: center;
+        text-align: center;
+
+ }
+
+ .main3 .service .hidden1{
+    display:none;
+ }
+ 
+    
+}
+
+
+
+
+
+    
